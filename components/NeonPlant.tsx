@@ -1,0 +1,2 @@
+'use client'
+export default function NeonPlant({className=''}:{className?:string}){return(<svg viewBox='0 0 200 200' className={className}><defs><linearGradient id='leaf' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stopColor='#34d399'/><stop offset='100%' stopColor='#22d3ee'/></linearGradient></defs><g fill='none' stroke='url(#leaf)' strokeWidth='3' strokeLinecap='round'><path d='M100 190 Q98 120 100 60'/>{Array.from({length:8}).map((_,i)=>(<path key={i} d={`M100 ${80+i*12} q${i%2?-40:40} -20 0 -36`} opacity={0.8}/>))}</g></svg>)}
